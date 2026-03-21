@@ -4,7 +4,7 @@
 
 ### Physics Validation Suite
 
-**Testing INT parameters against SDSS, WMAP, LIGO, Bell test, and QRNG real-world datasets**
+**SDSS | WMAP | LIGO | Bell test | QRNG | Willow quantum processor**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-green.svg)](https://python.org)
@@ -13,67 +13,69 @@
 
 ## Overview
 
-This repository contains a comprehensive physics validation suite testing Information Network Theory (INT) parameters against real-world observational data from major physics experiments and surveys.
+Validation suite testing Information Network Theory parameters against real-world physics data. INT proposes a GF(27) Galois field substrate underlying physical interactions. This repo tests that hypothesis against measured datasets from major experiments.
 
-The core hypothesis: information propagation through discrete network substrates produces emergent physical phenomena that match observed data when the network parameters are correctly tuned.
-
-## Validation Datasets
+## Validation Targets
 
 | Dataset | Source | What It Tests |
 |---------|--------|---------------|
-| **SDSS** | Sloan Digital Sky Survey | Large-scale structure, galaxy clustering |
-| **WMAP** | Wilkinson Microwave Anisotropy Probe | CMB power spectrum, cosmological parameters |
-| **LIGO** | Laser Interferometer Gravitational-Wave Observatory | Gravitational wave classicality |
-| **Bell test** | Experimental quantum mechanics | Non-locality, Bell inequality residuals |
-| **QRNG** | Quantum Random Number Generator | True randomness, bias detection |
+| SDSS | Sloan Digital Sky Survey | Large-scale structure, galaxy distribution |
+| WMAP | Wilkinson Microwave Anisotropy Probe | CMB power spectrum, cosmological parameters |
+| LIGO | Laser Interferometer Gravitational-Wave Observatory | Gravitational wave signatures |
+| Bell test | Loophole-free Bell inequality experiments | Quantum nonlocality bounds |
+| QRNG | Quantum random number generators | Randomness structure, bias detection |
+| Willow | Google Quantum AI processor | Quantum error correction, syndrome analysis |
 
-## Diagnostic Outputs
+## Structure
 
-The validation suite produces 7 diagnostic analyses:
+```
+int_physics_validation_suite.py  # Primary 7-test validation suite
+gf27_galois_field.py             # GF(27) substrate implementation
+gf27_theory_test.py              # Galois field discrimination tests
+universal_substrate_detector.py  # Cross-domain substrate detection
 
-1. **Degree Histogram** -- Network connectivity distribution vs observed structure
-2. **Persistent Homology** -- Topological features of the information network
-3. **Phase Locking** -- Synchronization behavior across network nodes
-4. **Gravitational Wave Classicality** -- LIGO data consistency with INT predictions
-5. **Bell Residuals** -- Deviation from quantum mechanical predictions
-6. **Decay Memory** -- Information persistence across network propagation
-7. **RNG Bias Detection** -- Statistical analysis of quantum randomness
+cosmos/                          # Cosmological derivations and validation
+|-- planck_validation.py         # Planck satellite data comparison
+|-- bbn_bao_lss_validation.py   # Big Bang nucleosynthesis + BAO + LSS
+|-- h0_scan.py                   # Hubble constant tension analysis
+|-- full_validation.py           # Combined cosmological validation
+|-- derive_matter.py             # Matter density derivation
+|-- derive_universe.py           # Universe-scale parameter derivation
+|-- derive_frontier.py           # Frontier physics derivations
+|-- derive_abyss.py              # Deep parameter space exploration
++-- (10 more derivation scripts)
 
-## Components
+quantum/                         # Google Willow quantum processor analysis
+|-- willow_syndrome_analysis.py  # Error syndrome pattern analysis
+|-- willow_anomaly_hunt.py       # Statistical anomaly detection
+|-- willow_candidate_tests.py    # Candidate signature validation
+|-- willow_noise_model_test.py   # Noise model discrimination
+|-- willow_projection_v2.py      # Projection analysis
+|-- willow_rate_matched.py       # Rate-matched comparison
++-- willow_check_matrix_projection.py
 
-| File | Description |
-|------|-------------|
-| `int_physics_validation_suite.py` | Main validation runner -- all 7 diagnostics |
-| `gf27_galois_field.py` | GF(27) Galois field implementation for substrate detection |
-| `gf27_theory_test.py` | Theoretical validation of GF(27) properties |
-| `universal_substrate_detector.py` | Substrate detection across experimental data |
-| `results/` | Output plots and analysis results |
-
-## GF(27) Galois Field
-
-A key mathematical tool in this analysis: the Galois field GF(27) = GF(3^3) provides the algebraic substrate for information network nodes. The choice of GF(27) is motivated by:
-
-- **Base 3**: Ternary information (vs binary) captures richer state spaces
-- **Dimension 3**: Matches spatial dimensionality
-- **Order 27**: Sufficient resolution for physical parameter mapping
+results/                         # Visualization outputs from validation suite
+```
 
 ## Quick Start
 
 ```bash
-# Run full validation suite
+# Run the primary 7-test validation suite
 python int_physics_validation_suite.py
 
-# Test GF(27) properties
+# Test GF(27) substrate detection
 python gf27_theory_test.py
 
-# Run substrate detection
-python universal_substrate_detector.py
+# Run cosmological validation
+python cosmos/full_validation.py
+
+# Analyze Willow quantum data
+python quantum/willow_syndrome_analysis.py
 ```
 
 ## Related
 
-- [SGM-Substrate](https://github.com/ACD421/sgm-substrate) -- Information-geometric principles applied to AI
-- [secp256k1-geometric-analysis](https://github.com/ACD421/secp256k1-geometric-analysis) -- Geometric analysis in cryptographic curves
+- [SGM-Substrate](https://github.com/ACD421/sgm-substrate) -- Same geometric framework applied to AI
 
 ## Author
 
